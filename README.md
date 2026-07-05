@@ -1,6 +1,6 @@
 # Loop Engineering
 
-**Repo:** [github.com/iechor/loops-automatic-researching](https://github.com/iechor/loops-automatic-researching) · **npm:** [`@iechor/loop-init`](https://www.npmjs.com/package/@iechor/loop-init) · [`@iechor/loop-audit`](https://www.npmjs.com/package/@iechor/loop-audit)
+**Repo:** [github.com/chenxingqiang/loops-automatic-researching](https://github.com/chenxingqiang/loops-automatic-researching) · **npm:** [`@iechor/loop-init`](https://www.npmjs.com/package/@iechor/loop-init) · [`@iechor/loop-audit`](https://www.npmjs.com/package/@iechor/loop-audit)
 
 <p align="center">
   <a href="https://cobusgreyling.github.io/loop-engineering/">
@@ -9,14 +9,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/iechor/loops-automatic-researching/stargazers"><img src="https://img.shields.io/github/stars/iechor/loops-automatic-researching?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/iechor/loops-automatic-researching/actions/workflows/audit.yml"><img src="https://img.shields.io/github/actions/workflow/status/iechor/loops-automatic-researching/audit.yml?label=loop-audit%20dogfood" alt="loop-audit dogfood"></a>
+  <a href="https://github.com/chenxingqiang/loops-automatic-researching/stargazers"><img src="https://img.shields.io/github/stars/chenxingqiang/loops-automatic-researching?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/chenxingqiang/loops-automatic-researching/actions/workflows/audit.yml"><img src="https://img.shields.io/github/actions/workflow/status/chenxingqiang/loops-automatic-researching/audit.yml?label=loop-audit%20dogfood" alt="loop-audit dogfood"></a>
   <a href="https://www.npmjs.com/package/@iechor/loop-audit"><img src="https://img.shields.io/npm/v/@iechor/loop-audit?label=loop-audit" alt="loop-audit npm"></a>
   <a href="https://www.npmjs.com/package/@iechor/loop-init"><img src="https://img.shields.io/npm/v/@iechor/loop-init?label=loop-init" alt="loop-init npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-cost"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-cost?label=loop-cost" alt="loop-cost npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-sync"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-sync?label=loop-sync" alt="loop-sync npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-context"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-context?label=loop-context" alt="loop-context npm"></a>
-  <a href="https://github.com/iechor/loops-automatic-researching/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
+  <a href="https://github.com/chenxingqiang/loops-automatic-researching/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
   <a href="https://cobusgreyling.github.io/loop-engineering/"><img src="https://img.shields.io/badge/GitHub_Pages-live%20%7C%20interactive-3ee8c5" alt="Pages"></a>
 </p>
 
@@ -95,8 +95,8 @@ For developers using Grok, Claude Code, Codex, Cursor, Trae, VS Code (Copilot + 
 | [loop-mcp-server](tools/mcp-server/) | MCP runtime lookup for patterns, skills, state — `node tools/mcp-server/dist/index.js` (repo v1; npm pending) |
 | [Goal Engineering](https://github.com/cobusgreyling/goal-engineering) | **Companion:** loops discover, goals finish — `/goal` + [stack cookbook](https://github.com/cobusgreyling/goal-engineering/blob/main/docs/stack-cookbook.md) (`npx @cobusgreyling/goal doctor .`) |
 | [Stories](stories/) | Real wins and honest failures |
-| [Issues](https://github.com/iechor/loops-automatic-researching/issues) | Bug reports and feature requests |
-| [Discussions](https://github.com/iechor/loops-automatic-researching/discussions) | Questions, adopters, and community |
+| [Issues](https://github.com/chenxingqiang/loops-automatic-researching/issues) | Bug reports and feature requests |
+| [Discussions](https://github.com/chenxingqiang/loops-automatic-researching/discussions) | Questions, adopters, and community |
 | [Upstream repo](https://github.com/cobusgreyling/loop-engineering) | Original loop-engineering reference by Cobus Greyling |
 
 <p align="center">
@@ -252,9 +252,9 @@ Addy Osmani:
 
 ## Contributing
 
-**First PR?** See [CONTRIBUTING.md](CONTRIBUTING.md) and open a [discussion](https://github.com/iechor/loops-automatic-researching/discussions) if you want help scoping a change. Share production patterns, tool mappings, and **failure stories** (token cost + root cause + remediation) — see [stories/](stories/) and [adopters](docs/adopters.md).
+**First PR?** See [CONTRIBUTING.md](CONTRIBUTING.md) and open a [discussion](https://github.com/chenxingqiang/loops-automatic-researching/discussions) if you want help scoping a change. Share production patterns, tool mappings, and **failure stories** (token cost + root cause + remediation) — see [stories/](stories/) and [adopters](docs/adopters.md).
 
-Fork maintained by [iechor](https://github.com/iechor). Concept and upstream reference: [cobusgreyling/loop-engineering](https://github.com/cobusgreyling/loop-engineering).
+Upstream concept: [cobusgreyling/loop-engineering](https://github.com/cobusgreyling/loop-engineering).
 
 ## Sources
 
@@ -279,11 +279,11 @@ MIT
 </p>
 
 <p align="center">
-  <a href="https://www.star-history.com/?repos=iechor%2Floops-automatic-researching&type=timeline&legend=top-left">
+  <a href="https://www.star-history.com/?repos=chenxingqiang%2Floops-automatic-researching&type=timeline&legend=top-left">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=iechor/loops-automatic-researching&type=timeline&theme=dark&legend=top-left" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=iechor/loops-automatic-researching&type=timeline&legend=top-left" />
-      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=iechor/loops-automatic-researching&type=timeline&legend=top-left" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=chenxingqiang/loops-automatic-researching&type=timeline&theme=dark&legend=top-left" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=chenxingqiang/loops-automatic-researching&type=timeline&legend=top-left" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=chenxingqiang/loops-automatic-researching&type=timeline&legend=top-left" />
     </picture>
   </a>
 </p>

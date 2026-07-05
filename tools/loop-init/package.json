@@ -42,12 +42,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iechor/loops-automatic-researching.git",
+    "url": "git+https://github.com/chenxingqiang/loops-automatic-researching.git",
     "directory": "tools/loop-init"
   },
-  "homepage": "https://github.com/iechor/loops-automatic-researching",
+  "homepage": "https://github.com/chenxingqiang/loops-automatic-researching",
   "bugs": {
-    "url": "https://github.com/iechor/loops-automatic-researching/issues"
+    "url": "https://github.com/chenxingqiang/loops-automatic-researching/issues"
   },
   "publishConfig": {
     "access": "public"

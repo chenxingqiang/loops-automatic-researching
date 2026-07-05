@@ -1,6 +1,6 @@
 # loop-init
 
-Published as [`@iechor/loop-init`](https://www.npmjs.com/package/@iechor/loop-init) · [github.com/iechor/loops-automatic-researching](https://github.com/iechor/loops-automatic-researching)
+Published as [`@iechor/loop-init`](https://www.npmjs.com/package/@iechor/loop-init) · [github.com/chenxingqiang/loops-automatic-researching](https://github.com/chenxingqiang/loops-automatic-researching)
 
 Scaffold loop engineering starters into your project by pattern and tool.
 
