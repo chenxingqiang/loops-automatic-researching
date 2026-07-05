@@ -2,15 +2,15 @@
 
 CLI that scores a project's **Loop Readiness** (0–100) and suggests next steps.
 
-**npx @cobusgreyling/loop-audit . --suggest** works immediately (published package).
+**npx @iechor/loop-audit . --suggest** works immediately. Published as [`@iechor/loop-audit`](https://www.npmjs.com/package/@iechor/loop-audit) from [iechor/loops-automatic-researching](https://github.com/iechor/loops-automatic-researching).
 
 ## Install & Run
 
 **npm (recommended):**
 
 ```bash
-npx @cobusgreyling/loop-audit .
-npx @cobusgreyling/loop-audit . --suggest
+npx @iechor/loop-audit .
+npx @iechor/loop-audit . --suggest
 ```
 
 **From this repo:**

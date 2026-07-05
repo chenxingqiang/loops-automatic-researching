@@ -3,8 +3,8 @@
 Clone-and-run scaffolds. Copy into your project — or use `loop-init`:
 
 ```bash
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
-npx @cobusgreyling/loop-init . -p pr-babysitter -t claude
+npx @iechor/loop-init . --pattern daily-triage --tool grok
+npx @iechor/loop-init . -p pr-babysitter -t claude
 ```
 
 ## Daily Triage (L1 report-only)
@@ -39,6 +39,6 @@ npx @cobusgreyling/loop-init . -p pr-babysitter -t claude
 After copying:
 
 ```bash
-npx @cobusgreyling/loop-audit .
-npx @cobusgreyling/loop-audit . --suggest
+npx @iechor/loop-audit .
+npx @iechor/loop-audit . --suggest
 ```

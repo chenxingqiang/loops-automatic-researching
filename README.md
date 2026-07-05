@@ -1,5 +1,6 @@
 # Loop Engineering
 
+**Repo:** [github.com/iechor/loops-automatic-researching](https://github.com/iechor/loops-automatic-researching) · **npm:** [`@iechor/loop-init`](https://www.npmjs.com/package/@iechor/loop-init) · [`@iechor/loop-audit`](https://www.npmjs.com/package/@iechor/loop-audit)
 
 <p align="center">
   <a href="https://cobusgreyling.github.io/loop-engineering/">
@@ -8,14 +9,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/cobusgreyling/loop-engineering/stargazers"><img src="https://img.shields.io/github/stars/cobusgreyling/loop-engineering?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/cobusgreyling/loop-engineering/actions/workflows/audit.yml"><img src="https://img.shields.io/github/actions/workflow/status/cobusgreyling/loop-engineering/audit.yml?label=loop-audit%20dogfood" alt="loop-audit dogfood"></a>
-  <a href="https://www.npmjs.com/package/@cobusgreyling/loop-audit"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-audit?label=loop-audit" alt="loop-audit npm"></a>
-  <a href="https://www.npmjs.com/package/@cobusgreyling/loop-init"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-init?label=loop-init" alt="loop-init npm"></a>
+  <a href="https://github.com/iechor/loops-automatic-researching/stargazers"><img src="https://img.shields.io/github/stars/iechor/loops-automatic-researching?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/iechor/loops-automatic-researching/actions/workflows/audit.yml"><img src="https://img.shields.io/github/actions/workflow/status/iechor/loops-automatic-researching/audit.yml?label=loop-audit%20dogfood" alt="loop-audit dogfood"></a>
+  <a href="https://www.npmjs.com/package/@iechor/loop-audit"><img src="https://img.shields.io/npm/v/@iechor/loop-audit?label=loop-audit" alt="loop-audit npm"></a>
+  <a href="https://www.npmjs.com/package/@iechor/loop-init"><img src="https://img.shields.io/npm/v/@iechor/loop-init?label=loop-init" alt="loop-init npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-cost"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-cost?label=loop-cost" alt="loop-cost npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-sync"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-sync?label=loop-sync" alt="loop-sync npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-context"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-context?label=loop-context" alt="loop-context npm"></a>
-  <a href="https://github.com/cobusgreyling/loop-engineering/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
+  <a href="https://github.com/iechor/loops-automatic-researching/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
   <a href="https://cobusgreyling.github.io/loop-engineering/"><img src="https://img.shields.io/badge/GitHub_Pages-live%20%7C%20interactive-3ee8c5" alt="Pages"></a>
 </p>
 
@@ -33,11 +34,11 @@
 </p>
 
 ```bash
-# npm: @iechor/loop-init · github.com/iechor/loops-automatic-researching
-npx @iechor/loop-init .
+npx @iechor/loop-init . --pattern daily-triage --tool grok
+# Cursor / Trae / VS Code: --tool cursor | trae | vscode
 ```
 
-`loop-init` scaffolds skills, state, and budget files, then prints your **Loop Ready** score and first loop command. Published as `@iechor/loop-init` on npm. Swap `--tool` for `claude`, `codex`, `opencode`, `cursor`, `trae`, or `vscode`.
+`loop-init` scaffolds skills, state, and budget files, then prints your **Loop Ready** score and first loop command. Published as [`@iechor/loop-init`](https://www.npmjs.com/package/@iechor/loop-init) on npm. Swap `--tool` for `claude`, `codex`, `opencode`, `cursor`, `trae`, or `vscode`.
 
 <p align="center">
   <a href="docs/QUICKSTART.md">
@@ -86,18 +87,17 @@ For developers using Grok, Claude Code, Codex, Cursor, Trae, VS Code (Copilot + 
 | [Patterns](patterns/README.md) | 7 production patterns + [interactive picker](https://cobusgreyling.github.io/loop-engineering/#interactive) |
 | [Starters](starters/) | Clone-and-run kits (Grok, Claude Code, Codex, Opencode, Cursor, Trae, VS Code multi-ext) |
 | [Opencode examples](examples/opencode/) | CLI-first loops: cron/systemd + `opencode run`, skills, worktrees |
-| [loop-audit](tools/loop-audit/) | Loop Readiness Score CLI (v1.5 + constraints scoring) — `npx @cobusgreyling/loop-audit . --suggest` · `--badge` for README |
-| [loop-init](tools/loop-init/) | Scaffold starters + budget/run-log + constraints (v1.2) — `npx @iechor/loop-init . --pattern daily-triage --tool grok` |
+| [loop-audit](tools/loop-audit/) | Loop Readiness Score CLI (v1.5 + constraints scoring) — `npx @iechor/loop-audit . --suggest` · `--badge` for README |
+| [loop-init](tools/loop-init/) | Scaffold starters + budget/run-log + constraints (v1.4) — `npx @iechor/loop-init . --pattern daily-triage --tool grok` |
 | [loop-cost](tools/loop-cost/) | Token spend estimator — `npx @cobusgreyling/loop-cost` |
 | [loop-sync](tools/loop-sync/) | Drift detection between `STATE.md` and `LOOP.md` — `npx @cobusgreyling/loop-sync .` |
 | [loop-context](tools/loop-context/) | Stateful memory manager + circuit breaker for long runs — `npx @cobusgreyling/loop-context --check --ledger run.json` |
 | [loop-mcp-server](tools/mcp-server/) | MCP runtime lookup for patterns, skills, state — `node tools/mcp-server/dist/index.js` (repo v1; npm pending) |
 | [Goal Engineering](https://github.com/cobusgreyling/goal-engineering) | **Companion:** loops discover, goals finish — `/goal` + [stack cookbook](https://github.com/cobusgreyling/goal-engineering/blob/main/docs/stack-cookbook.md) (`npx @cobusgreyling/goal doctor .`) |
 | [Stories](stories/) | Real wins and honest failures |
-| [Contributor quickstart](https://github.com/cobusgreyling/loop-engineering/discussions/123) | **Help wanted:** 12 scoped `good first issues` — comment *I'll take this* to get assigned |
-| [Community update](https://github.com/cobusgreyling/loop-engineering/discussions/145) | **July 4:** 5.5k stars, traffic sources, contributor merges |
-| [Prior release notes](https://github.com/cobusgreyling/loop-engineering/discussions/89) | v1.5.0 — loop-sync, constraints, MCP server |
-| [Add your project](https://github.com/cobusgreyling/loop-engineering/discussions/92) | **Pinned:** Loop Ready badge + adopters list |
+| [Issues](https://github.com/iechor/loops-automatic-researching/issues) | Bug reports and feature requests |
+| [Discussions](https://github.com/iechor/loops-automatic-researching/discussions) | Questions, adopters, and community |
+| [Upstream repo](https://github.com/cobusgreyling/loop-engineering) | Original loop-engineering reference by Cobus Greyling |
 
 <p align="center">
   <img src="assets/visuals/section-divider.svg" alt="" width="100%" />
@@ -191,10 +191,10 @@ npx @iechor/loop-init . --pattern daily-triage --tool grok
 npx @cobusgreyling/loop-cost --pattern daily-triage --level L1
 
 # 3. Re-audit after improvements
-npx @cobusgreyling/loop-audit . --suggest
+npx @iechor/loop-audit . --suggest
 
 # Optional: paste Loop Ready badge into your README
-npx @cobusgreyling/loop-audit . --badge
+npx @iechor/loop-audit . --badge
 
 # 4. See scores climb: empty → L1 → L2
 bash scripts/before-after-demo.sh
@@ -250,21 +250,11 @@ Loop engineering amplifies judgment — both good and bad.
 Addy Osmani:
 > “Build the loop. But build it like someone who intends to stay the engineer, not just the person who presses go.”
 
-## Help wanted
-
-**First PR?** Start with the [contributor quickstart](https://github.com/cobusgreyling/loop-engineering/discussions/123) — ~10 min to ~1 hr tasks with same-day review on stories and adopters.
-
-| Pick one | Issue |
-|----------|-------|
-| ~10 min | [#120 — Add your project to adopters](https://github.com/cobusgreyling/loop-engineering/issues/120) |
-| ~20 min | [#121 — QUICKSTART `loop-init --tool` values](https://github.com/cobusgreyling/loop-engineering/issues/121) |
-| ~1 hr | [#118](https://github.com/cobusgreyling/loop-engineering/issues/118) / [#119](https://github.com/cobusgreyling/loop-engineering/issues/119) — **failure stories welcome** |
-
-Comment **"I'll take this"** on any [`good first issue`](https://github.com/cobusgreyling/loop-engineering/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for assignment.
-
 ## Contributing
 
-Share production patterns, tool mappings, and failure stories. See [CONTRIBUTING.md](CONTRIBUTING.md) (contribution ladder + [`good first issue` backlog](https://github.com/cobusgreyling/loop-engineering/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)), [adopters](docs/adopters.md), and [GitHub Discussions](https://github.com/cobusgreyling/loop-engineering/discussions).
+**First PR?** See [CONTRIBUTING.md](CONTRIBUTING.md) and open a [discussion](https://github.com/iechor/loops-automatic-researching/discussions) if you want help scoping a change. Share production patterns, tool mappings, and **failure stories** (token cost + root cause + remediation) — see [stories/](stories/) and [adopters](docs/adopters.md).
+
+Fork maintained by [iechor](https://github.com/iechor). Concept and upstream reference: [cobusgreyling/loop-engineering](https://github.com/cobusgreyling/loop-engineering).
 
 ## Sources
 
@@ -289,11 +279,11 @@ MIT
 </p>
 
 <p align="center">
-  <a href="https://www.star-history.com/?repos=cobusgreyling%2Floop-engineering&type=timeline&legend=top-left">
+  <a href="https://www.star-history.com/?repos=iechor%2Floops-automatic-researching&type=timeline&legend=top-left">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=cobusgreyling/loop-engineering&type=timeline&theme=dark&legend=top-left" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=cobusgreyling/loop-engineering&type=timeline&legend=top-left" />
-      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=cobusgreyling/loop-engineering&type=timeline&legend=top-left" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=iechor/loops-automatic-researching&type=timeline&theme=dark&legend=top-left" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=iechor/loops-automatic-researching&type=timeline&legend=top-left" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=iechor/loops-automatic-researching&type=timeline&legend=top-left" />
     </picture>
   </a>
 </p>

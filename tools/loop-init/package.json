@@ -4,7 +4,7 @@
   "description": "Scaffold loop engineering patterns and starters. Grok, Claude, Codex, Opencode, Cursor, Trae, VS Code. npx @iechor/loop-init . --pattern daily-triage --tool vscode",
   "type": "module",
   "bin": {
-    "loop-init": "./dist/cli.js"
+    "loop-init": "dist/cli.js"
   },
   "files": [
     "dist",

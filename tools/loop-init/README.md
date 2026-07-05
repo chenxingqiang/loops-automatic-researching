@@ -1,5 +1,7 @@
 # loop-init
 
+Published as [`@iechor/loop-init`](https://www.npmjs.com/package/@iechor/loop-init) · [github.com/iechor/loops-automatic-researching](https://github.com/iechor/loops-automatic-researching)
+
 Scaffold loop engineering starters into your project by pattern and tool.
 
 **npx @iechor/loop-init . --pattern daily-triage --tool grok** works immediately.

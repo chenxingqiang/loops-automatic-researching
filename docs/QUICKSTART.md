@@ -19,13 +19,13 @@ Or start with **Daily Triage** if you just want to learn loop discipline with lo
 Run this in the root of any git project (no clone required):
 
 ```bash
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
+npx @iechor/loop-init . --pattern daily-triage --tool grok
 ```
 
 Swap `--pattern` for any pattern from [patterns/registry.yaml](../patterns/registry.yaml). List all patterns:
 
 ```bash
-npx @cobusgreyling/loop-init --help
+npx @iechor/loop-init --help
 ```
 
 ### Which `--tool` values work?
@@ -65,13 +65,13 @@ Exit `0` = continue · `2` = escalate to a human. The breaker trips on max itera
 ## 4. Audit readiness (30 seconds)
 
 ```bash
-npx @cobusgreyling/loop-audit . --suggest
+npx @iechor/loop-audit . --suggest
 ```
 
 Scores 0–100 with concrete next steps. Re-run after each improvement. Paste a badge when you're proud of the score:
 
 ```bash
-npx @cobusgreyling/loop-audit . --badge
+npx @iechor/loop-audit . --badge
 ```
 
 ### Optional: MCP runtime lookup
@@ -112,7 +112,7 @@ No `loop-init --tool openclaw` yet — copy `skills/loop-triage/SKILL.md` and `S
 ### Opencode
 
 ```bash
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool opencode
+npx @iechor/loop-init . --pattern daily-triage --tool opencode
 ```
 
 Then schedule with cron or systemd — each tick runs headless via `opencode run`:
@@ -126,7 +126,7 @@ See [examples/opencode/daily-triage.md](../examples/opencode/daily-triage.md) fo
 ### Cursor
 
 ```bash
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool cursor
+npx @iechor/loop-init . --pattern daily-triage --tool cursor
 ```
 
 Then create a Cursor Automation (or run manually in Agent chat) with the first-loop prompt printed by `loop-init`. See [examples/cursor/daily-triage.md](../examples/cursor/daily-triage.md).
@@ -135,7 +135,7 @@ Then create a Cursor Automation (or run manually in Agent chat) with the first-l
 ### Trae
 
 ```bash
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool trae
+npx @iechor/loop-init . --pattern daily-triage --tool trae
 ```
 
 Skills land in `.trae/skills/`; optional always-on rules in `.trae/rules/`. Run the first-loop Agent prompt printed by `loop-init`. See [examples/trae/daily-triage.md](../examples/trae/daily-triage.md).
@@ -144,7 +144,7 @@ Skills land in `.trae/skills/`; optional always-on rules in `.trae/rules/`. Run 
 ### VS Code (multi-extension host)
 
 ```bash
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool vscode
+npx @iechor/loop-init . --pattern daily-triage --tool vscode
 ```
 
 Skills land in `.github/skills/`, `.claude/skills/`, `.trae/skills/`, and `.cline/skills/`. Remove unused paths. See [plugins.md](../examples/vscode/plugins.md). See [examples/vscode/daily-triage.md](../examples/vscode/daily-triage.md).
@@ -178,19 +178,19 @@ Commit the scaffold + first run update so `loop-audit` sees activity on the next
 ```bash
 # Scaffold — --tool accepts: grok | claude | codex | opencode
 # (windsurf, openclaw: manual copy — see table in section 2)
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
+npx @iechor/loop-init . --pattern daily-triage --tool grok
 
 # List patterns and flags
-npx @cobusgreyling/loop-init --help
+npx @iechor/loop-init --help
 
 # Cost check
 npx @cobusgreyling/loop-cost --pattern daily-triage --level L1 --cadence 1d
 
 # Audit + suggestions
-npx @cobusgreyling/loop-audit . --suggest
+npx @iechor/loop-audit . --suggest
 
 # Optional badge for your README
-npx @cobusgreyling/loop-audit . --badge
+npx @iechor/loop-audit . --badge
 ```
 
 ## Learn the why (optional, 10 minutes)
