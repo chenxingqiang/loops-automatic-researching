@@ -1,7 +1,7 @@
 {
-  "name": "@cobusgreyling/loop-audit",
+  "name": "@iechor/loop-audit",
   "version": "1.5.2",
-  "description": "Loop engineering readiness auditor. Compute Loop Readiness Score (L0-L3), detect activity, and get actionable suggestions. npx @cobusgreyling/loop-audit . --suggest",
+  "description": "Loop engineering readiness auditor. Compute Loop Readiness Score (L0-L3), detect activity, and get actionable suggestions. npx @iechor/loop-audit . --suggest",
   "type": "module",
   "bin": {
     "loop-audit": "./dist/cli.js"
@@ -33,16 +33,16 @@
     "readiness",
     "audit"
   ],
-  "author": "Cobus Greyling",
+  "author": "iechor",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cobusgreyling/loop-engineering.git",
+    "url": "git+https://github.com/iechor/loops-automatic-researching.git",
     "directory": "tools/loop-audit"
   },
-  "homepage": "https://cobusgreyling.github.io/loop-engineering/",
+  "homepage": "https://github.com/iechor/loops-automatic-researching",
   "bugs": {
-    "url": "https://github.com/cobusgreyling/loop-engineering/issues"
+    "url": "https://github.com/iechor/loops-automatic-researching/issues"
   },
   "publishConfig": {
     "access": "public"

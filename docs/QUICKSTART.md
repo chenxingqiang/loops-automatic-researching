@@ -36,7 +36,9 @@ npx @cobusgreyling/loop-init --help
 | `claude` | Yes | Native `/loop` + `$skill` invocation |
 | `codex` | Yes | Automations tab for scheduling |
 | `opencode` | Yes | Cron/systemd + `opencode run` |
-| `cursor` | No — manual copy | Copy skills + `STATE.md`; use Automations — see [examples/cursor/](../examples/cursor/) |
+| `cursor` | Yes | Automations or Agent chat — see [examples/cursor/](../examples/cursor/) |
+| `trae` | Yes | Agent chat + `.trae/skills/` — see [examples/trae/](../examples/trae/) |
+| `vscode` | Yes | Multi-extension host (Copilot, Claude, Trae, Cline paths) — see [examples/vscode/](../examples/vscode/) |
 | `windsurf` | No — manual copy | Copy skills + `STATE.md`; use Workflows — see [examples/windsurf/](../examples/windsurf/) |
 | `openclaw` | No — manual copy | Copy `skills/` + `STATE.md`; use `openclaw cron` — see [examples/openclaw/](../examples/openclaw/) |
 
@@ -123,7 +125,29 @@ See [examples/opencode/daily-triage.md](../examples/opencode/daily-triage.md) fo
 
 ### Cursor
 
-No `loop-init --tool cursor` yet — copy skills and state from any starter, then map scheduling to editor Automations. See [examples/cursor/daily-triage.md](../examples/cursor/daily-triage.md).
+```bash
+npx @cobusgreyling/loop-init . --pattern daily-triage --tool cursor
+```
+
+Then create a Cursor Automation (or run manually in Agent chat) with the first-loop prompt printed by `loop-init`. See [examples/cursor/daily-triage.md](../examples/cursor/daily-triage.md).
+
+
+### Trae
+
+```bash
+npx @cobusgreyling/loop-init . --pattern daily-triage --tool trae
+```
+
+Skills land in `.trae/skills/`; optional always-on rules in `.trae/rules/`. Run the first-loop Agent prompt printed by `loop-init`. See [examples/trae/daily-triage.md](../examples/trae/daily-triage.md).
+
+
+### VS Code (multi-extension host)
+
+```bash
+npx @cobusgreyling/loop-init . --pattern daily-triage --tool vscode
+```
+
+Skills land in `.github/skills/`, `.claude/skills/`, `.trae/skills/`, and `.cline/skills/`. Remove unused paths. See [plugins.md](../examples/vscode/plugins.md). See [examples/vscode/daily-triage.md](../examples/vscode/daily-triage.md).
 
 ### Windsurf
 
@@ -153,7 +177,7 @@ Commit the scaffold + first run update so `loop-audit` sees activity on the next
 
 ```bash
 # Scaffold — --tool accepts: grok | claude | codex | opencode
-# (cursor, windsurf, openclaw: manual copy — see table in section 2)
+# (windsurf, openclaw: manual copy — see table in section 2)
 npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
 
 # List patterns and flags

@@ -165,6 +165,10 @@ async function scanSkillsDirectory(targetDir: string): Promise<Map<string, strin
     path.join(targetDir, '.grok', 'skills'),
     path.join(targetDir, '.claude', 'skills'),
     path.join(targetDir, '.codex', 'skills'),
+    path.join(targetDir, '.cursor', 'skills'),
+    path.join(targetDir, '.trae', 'skills'),
+    path.join(targetDir, '.github', 'skills'),
+    path.join(targetDir, '.cline', 'skills'),
   ];
 
   for (const skillsDir of skillDirs) {

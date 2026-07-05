@@ -99,6 +99,26 @@ Optional but recommended during L1 dogfood runs. Even occasional critique entrie
 **Codex**:
 - Automation: daily "Changelog Drafter" that calls the scan + draft skills and posts the draft to a Triage inbox or a dedicated release-prep issue.
 
+
+**Cursor**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern changelog-drafter --tool cursor`
+- Automation daily: run `changelog-scan` + `draft-release-notes` skills. Human review before publish.
+- See `examples/cursor/changelog-drafter.md`.
+
+
+**Trae**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern changelog-drafter --tool trae`
+- Agent chat: run skill from `.trae/skills/`. Optional rules in `.trae/rules/`.
+- See `examples/trae/`.
+
+
+**VS Code (multi-extension host)**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern changelog-drafter --tool vscode`
+- Skills → `.github/skills/` (Copilot), `.claude/skills/` (Claude Code), `.trae/skills/` (Trae ext), `.cline/skills/` (Cline). Remove unused paths.
+- Standalone Trae/Cursor IDE → `--tool trae` or `--tool cursor`.
+- See `examples/vscode/plugins.md`.
+
+
 **GitHub Actions**:
 - See `examples/github-actions/` for a workflow that can be triggered on push to main or `workflow_dispatch`. It can comment the draft on a release tracking issue or create a draft PR.
 

@@ -76,6 +76,12 @@ Example state entry:
 - Expose the state file in the repo or a shared doc so the whole team can see what the loop is doing.
 - Make the loop's comments on PRs clearly signed (e.g. "🤖 Loop Engineering — PR Babysitter").
 
+
+**Cursor**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern pr-babysitter --tool cursor`
+- Automation 10m: run `pr-review-triage` skill, update `pr-babysitter-state.md`. No auto-merge week one.
+- See `examples/cursor/pr-babysitter.md`.
+
 ## Failure Modes & Mitigations
 
 - **Loop proposes bad fixes** → Strong verifier sub-agent (maker/checker) + human review gate for anything beyond trivial.

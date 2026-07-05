@@ -82,6 +82,26 @@ Use `/goal` for focused "get green" sessions; use scheduled sweeper for ongoing 
 **Codex**:
 - Automation: "Summarise CI failures every 30m" → Triage inbox; separate automation for fix attempts.
 
+
+**Cursor**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern ci-sweeper --tool cursor`
+- Automation 15m: run `ci-triage` skill on failing CI. Fix regressions in worktree + verifier. Max 3 attempts.
+- See `examples/cursor/ci-sweeper.md`.
+
+
+**Trae**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern ci-sweeper --tool trae`
+- Agent chat: run skill from `.trae/skills/`. Optional rules in `.trae/rules/`.
+- See `examples/trae/`.
+
+
+**VS Code (multi-extension host)**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern ci-sweeper --tool vscode`
+- Skills → `.github/skills/` (Copilot), `.claude/skills/` (Claude Code), `.trae/skills/` (Trae ext), `.cline/skills/` (Cline). Remove unused paths.
+- Standalone Trae/Cursor IDE → `--tool trae` or `--tool cursor`.
+- See `examples/vscode/plugins.md`.
+
+
 **GitHub Actions**:
 - See `examples/github-actions/ci-sweeper.yml` — triggers on workflow failure.
 

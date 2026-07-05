@@ -2,20 +2,23 @@
 
 Scaffold loop engineering starters into your project by pattern and tool.
 
-**npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok** works immediately.
+**npx @iechor/loop-init . --pattern daily-triage --tool grok** works immediately.
 
 ## Install & Run
 
 ```bash
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool opencode
-npx @cobusgreyling/loop-init . -p pr-babysitter -t claude
-npx @cobusgreyling/loop-init . -p dependency-sweeper --dry-run
+npx @iechor/loop-init . --pattern daily-triage --tool grok
+npx @iechor/loop-init . --pattern daily-triage --tool opencode
+npx @iechor/loop-init . --pattern daily-triage --tool cursor
+npx @iechor/loop-init . --pattern daily-triage --tool trae
+npx @iechor/loop-init . --pattern daily-triage --tool vscode
+npx @iechor/loop-init . -p pr-babysitter -t claude
+npx @iechor/loop-init . -p dependency-sweeper --dry-run
 ```
 
 See [docs/RELEASE.md](../../docs/RELEASE.md) for npm publish tags. The published package bundles `starters/` and `templates/` from this monorepo.
 
-After scaffolding, always run `npx @cobusgreyling/loop-audit . --suggest` and actually execute the first report-only loop to generate activity signals.
+After scaffolding, always run `npx @iechor/loop-audit . --suggest` and actually execute the first report-only loop to generate activity signals.
 
 ## Patterns
 
@@ -50,6 +53,9 @@ Every scaffold also creates:
 - `claude`
 - `codex`
 - `opencode` — daily-triage ships `minimal-loop-opencode` (`skills/`, `AGENTS.md`, `opencode.json`)
+- `cursor` — daily-triage ships `minimal-loop-cursor` (`.cursor/skills/`, `.cursor/agents/`)
+- `trae` — daily-triage ships `minimal-loop-trae` (`.trae/skills/`)
+- `vscode` — VS Code host: scaffolds `.github/skills/`, `.claude/skills/`, `.trae/skills/`, `.cline/skills/` (Copilot, Claude Code, Trae, Cline extensions)
 
 Falls back to Grok starter paths when a per-tool variant is not yet available.
 
@@ -63,6 +69,6 @@ node dist/cli.js /path/to/project --pattern daily-triage --tool grok
 Pair with `loop-audit` and `loop-cost` after scaffolding:
 
 ```bash
-npx @cobusgreyling/loop-cost --pattern daily-triage --level L1
-npx @cobusgreyling/loop-audit . --suggest
+npx @iechor/loop-cost --pattern daily-triage --level L1
+npx @iechor/loop-audit . --suggest
 ```

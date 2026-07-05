@@ -75,6 +75,12 @@ Prune merged/closed entries on every run.
 **Codex**:
 - Schedule a recurring Codex task that runs the triage skill against package.json + package-lock.json and produces the state update + suggested diffs.
 
+
+**Cursor**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern dependency-sweeper --tool cursor`
+- Automation 6h: run `dependency-triage` skill. Patch-only with verifier; escalate majors.
+- See `examples/cursor/dependency-sweeper.md`.
+
 ## Failure Modes & Mitigations
 
 | Failure | Mitigation |

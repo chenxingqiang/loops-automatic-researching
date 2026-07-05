@@ -33,10 +33,11 @@
 </p>
 
 ```bash
-npx @cobusgreyling/loop-init .
+# npm: @iechor/loop-init · github.com/iechor/loops-automatic-researching
+npx @iechor/loop-init .
 ```
 
-`loop-init` scaffolds skills, state, and budget files, then prints your **Loop Ready** score and first loop command. Swap `--tool` for `claude`, `codex`, or `opencode`.
+`loop-init` scaffolds skills, state, and budget files, then prints your **Loop Ready** score and first loop command. Published as `@iechor/loop-init` on npm. Swap `--tool` for `claude`, `codex`, `opencode`, `cursor`, `trae`, or `vscode`.
 
 <p align="center">
   <a href="docs/QUICKSTART.md">
@@ -48,7 +49,7 @@ Loop engineering replaces you as the person who prompts the agent — you design
 
 **New here?** [Quickstart (5 min)](docs/QUICKSTART.md) · [Interactive picker](https://cobusgreyling.github.io/loop-engineering/#interactive)
 
-For developers using Grok, Claude Code, Codex, Cursor, and other AI coding agents.
+For developers using Grok, Claude Code, Codex, Cursor, Trae, VS Code (Copilot + extensions), and other AI coding agents.
 
 <p align="center">
   <strong><a href="https://cobusgreyling.github.io/loop-engineering/">→ Interactive showcase + pattern picker</a></strong>
@@ -83,10 +84,10 @@ For developers using Grok, Claude Code, Codex, Cursor, and other AI coding agent
 | [Primitives Matrix](docs/primitives-matrix.md) | Cross-tool loop primitive mapping — bookmark this |
 | [Loop Design Checklist](docs/loop-design-checklist.md) | Ship readiness rubric |
 | [Patterns](patterns/README.md) | 7 production patterns + [interactive picker](https://cobusgreyling.github.io/loop-engineering/#interactive) |
-| [Starters](starters/) | Clone-and-run kits (Grok, Claude Code, Codex, Opencode) |
+| [Starters](starters/) | Clone-and-run kits (Grok, Claude Code, Codex, Opencode, Cursor, Trae, VS Code multi-ext) |
 | [Opencode examples](examples/opencode/) | CLI-first loops: cron/systemd + `opencode run`, skills, worktrees |
 | [loop-audit](tools/loop-audit/) | Loop Readiness Score CLI (v1.5 + constraints scoring) — `npx @cobusgreyling/loop-audit . --suggest` · `--badge` for README |
-| [loop-init](tools/loop-init/) | Scaffold starters + budget/run-log + constraints (v1.2) — `npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok` |
+| [loop-init](tools/loop-init/) | Scaffold starters + budget/run-log + constraints (v1.2) — `npx @iechor/loop-init . --pattern daily-triage --tool grok` |
 | [loop-cost](tools/loop-cost/) | Token spend estimator — `npx @cobusgreyling/loop-cost` |
 | [loop-sync](tools/loop-sync/) | Drift detection between `STATE.md` and `LOOP.md` — `npx @cobusgreyling/loop-sync .` |
 | [loop-context](tools/loop-context/) | Stateful memory manager + circuit breaker for long runs — `npx @cobusgreyling/loop-context --check --ledger run.json` |
@@ -183,7 +184,8 @@ Machine-readable index: [patterns/registry.yaml](patterns/registry.yaml) (7 patt
 
 ```bash
 # 1. Scaffold + get your Loop Ready score (printed automatically)
-npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
+npx @iechor/loop-init . --pattern daily-triage --tool grok
+#    Cursor / Trae / VS Code: --tool cursor | trae | vscode
 
 # 2. Estimate token spend for your cadence
 npx @cobusgreyling/loop-cost --pattern daily-triage --level L1
@@ -220,6 +222,9 @@ Phased rollout: **L1 report → L2 assisted fixes → L3 unattended** — see [l
 - [Codex](examples/codex/)
 - [OpenClaw](examples/openclaw/daily-triage.md)
 - [Opencode](examples/opencode/)
+- [Cursor](examples/cursor/)
+- [Trae](examples/trae/)
+- [VS Code](examples/vscode/)
 - [GitHub Actions](examples/github-actions/)
 
 ## Operating & Safety

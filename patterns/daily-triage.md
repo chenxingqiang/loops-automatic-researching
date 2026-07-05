@@ -90,6 +90,26 @@ After each Daily Triage run, record:
 **Codex**:
 - Automations tab: daily prompt calling `$loop-triage`, output to Triage inbox + `STATE.md`.
 
+
+**Cursor**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern daily-triage --tool cursor`
+- Automation or Agent chat: run `loop-triage` skill, update `STATE.md`. Report-only week one.
+- See `examples/cursor/daily-triage.md`.
+
+
+**Trae**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern daily-triage --tool trae`
+- Agent chat: run skill from `.trae/skills/`. Optional rules in `.trae/rules/`.
+- See `examples/trae/`.
+
+
+**VS Code (multi-extension host)**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern daily-triage --tool vscode`
+- Skills → `.github/skills/` (Copilot), `.claude/skills/` (Claude Code), `.trae/skills/` (Trae ext), `.cline/skills/` (Cline). Remove unused paths.
+- Standalone Trae/Cursor IDE → `--tool trae` or `--tool cursor`.
+- See `examples/vscode/plugins.md`.
+
+
 **GitHub Actions**:
 - See `examples/github-actions/daily-triage.yml`.
 

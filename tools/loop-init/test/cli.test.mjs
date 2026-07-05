@@ -23,6 +23,9 @@ test('loop-init --help exits 0', async () => {
   const { stdout } = await exec('node', [CLI, '--help']);
   assert.match(stdout, /changelog-drafter/);
   assert.match(stdout, /opencode/);
+  assert.match(stdout, /cursor/);
+  assert.match(stdout, /trae/);
+  assert.match(stdout, /vscode/);
 });
 
 test('loop-init dry-run scaffolds daily-triage', async () => {
@@ -91,6 +94,53 @@ test('loop-init rejects unknown tool', async () => {
   );
 });
 
+
+
+
+test('loop-init scaffolds daily-triage for vscode (multi-extension paths)', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'loop-init-vscode-'));
+  try {
+    await exec('node', [CLI, dir, '--pattern', 'daily-triage', '--tool', 'vscode']);
+    await access(path.join(dir, 'STATE.md'));
+    await access(path.join(dir, '.github', 'skills', 'loop-triage', 'SKILL.md'));
+    await access(path.join(dir, '.claude', 'skills', 'loop-triage', 'SKILL.md'));
+    await access(path.join(dir, '.trae', 'skills', 'loop-triage', 'SKILL.md'));
+    await access(path.join(dir, '.cline', 'skills', 'loop-triage', 'SKILL.md'));
+    await access(path.join(dir, '.claude', 'agents', 'loop-verifier.md'));
+    await assert.rejects(() => access(path.join(dir, '.grok', 'skills', 'loop-triage', 'SKILL.md')));
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test('loop-init scaffolds daily-triage for trae', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'loop-init-trae-'));
+  try {
+    await exec('node', [CLI, dir, '--pattern', 'daily-triage', '--tool', 'trae']);
+    await access(path.join(dir, 'STATE.md'));
+    await access(path.join(dir, '.trae', 'skills', 'loop-triage', 'SKILL.md'));
+    await access(path.join(dir, '.trae', 'skills', 'loop-verifier', 'SKILL.md'));
+    await assert.rejects(() => access(path.join(dir, '.grok', 'skills', 'loop-triage', 'SKILL.md')));
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test('loop-init scaffolds daily-triage for cursor', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'loop-init-cursor-'));
+  try {
+    await exec('node', [CLI, dir, '--pattern', 'daily-triage', '--tool', 'cursor']);
+    await access(path.join(dir, 'STATE.md'));
+    await access(path.join(dir, 'LOOP.md'));
+    await access(path.join(dir, '.cursor', 'skills', 'loop-triage', 'SKILL.md'));
+    await access(path.join(dir, '.cursor', 'agents', 'loop-verifier.md'));
+    await access(path.join(dir, 'loop-budget.md'));
+    await access(path.join(dir, 'loop-run-log.md'));
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
 test('loop-init scaffolds daily-triage for opencode', async () => {
   const dir = await mkdtemp(path.join(tmpdir(), 'loop-init-opencode-'));
   try {
@@ -102,6 +152,21 @@ test('loop-init scaffolds daily-triage for opencode', async () => {
     await access(path.join(dir, 'skills', 'loop-triage', 'SKILL.md'));
     await access(path.join(dir, 'loop-budget.md'));
     await access(path.join(dir, 'loop-run-log.md'));
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+
+test('loop-init scaffolds ci-sweeper for cursor', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'loop-init-cursor-ci-'));
+  try {
+    await exec('node', [CLI, dir, '--pattern', 'ci-sweeper', '--tool', 'cursor']);
+    await access(path.join(dir, 'ci-sweeper-state.md'));
+    await access(path.join(dir, '.cursor', 'skills', 'ci-triage', 'SKILL.md'));
+    await access(path.join(dir, '.cursor', 'skills', 'minimal-fix', 'SKILL.md'));
+    await access(path.join(dir, '.cursor', 'agents', 'loop-verifier.md'));
+    await assert.rejects(() => access(path.join(dir, '.grok', 'skills', 'ci-triage', 'SKILL.md')));
   } finally {
     await rm(dir, { recursive: true, force: true });
   }

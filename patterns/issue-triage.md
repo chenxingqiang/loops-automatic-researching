@@ -73,6 +73,26 @@ The loop prunes closed/merged items and only keeps "needs attention" items.
 **Codex**:
 Automation every 2h or on `issues` event: run issue-triage → update state. Report mode.
 
+
+**Cursor**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern issue-triage --tool cursor`
+- Automation 2h: run `issue-triage` skill. Propose labels only — no auto-apply.
+- See `examples/cursor/issue-triage.md`.
+
+
+**Trae**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern issue-triage --tool trae`
+- Agent chat: run skill from `.trae/skills/`. Optional rules in `.trae/rules/`.
+- See `examples/trae/`.
+
+
+**VS Code (multi-extension host)**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern issue-triage --tool vscode`
+- Skills → `.github/skills/` (Copilot), `.claude/skills/` (Claude Code), `.trae/skills/` (Trae ext), `.cline/skills/` (Cline). Remove unused paths.
+- Standalone Trae/Cursor IDE → `--tool trae` or `--tool cursor`.
+- See `examples/vscode/plugins.md`.
+
+
 **GitHub Actions**:
 See `examples/github-actions/` for a starter workflow that can react to issue events + scheduled run.
 

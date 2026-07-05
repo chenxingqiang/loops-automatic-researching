@@ -117,6 +117,10 @@ async function findSkills(root: string): Promise<string[]> {
     path.join(root, '.grok', 'skills'),
     path.join(root, '.claude', 'skills'),
     path.join(root, '.codex', 'skills'),
+    path.join(root, '.cursor', 'skills'),
+    path.join(root, '.trae', 'skills'),
+    path.join(root, '.github', 'skills'),
+    path.join(root, '.cline', 'skills'),
     path.join(root, 'skills'),
   ];
   const found: string[] = [];
@@ -133,6 +137,8 @@ async function findSkills(root: string): Promise<string[]> {
   const agentDirs = [
     path.join(root, '.claude', 'agents'),
     path.join(root, '.codex', 'agents'),
+    path.join(root, '.cursor', 'agents'),
+    path.join(root, '.github', 'agents'),
   ];
   for (const dir of agentDirs) {
     if (!(await fileExists(dir))) continue;
@@ -371,6 +377,10 @@ export async function auditProject(target: string): Promise<AuditResult> {
     path.join(root, '.grok', 'skills', 'loop-budget'),
     path.join(root, '.claude', 'skills', 'loop-budget'),
     path.join(root, '.codex', 'skills', 'loop-budget'),
+    path.join(root, '.cursor', 'skills', 'loop-budget'),
+    path.join(root, '.trae', 'skills', 'loop-budget'),
+    path.join(root, '.github', 'skills', 'loop-budget'),
+    path.join(root, '.cline', 'skills', 'loop-budget'),
   ];
   let budgetSkill = false;
   for (const dir of budgetSkillDirs) {
@@ -388,6 +398,10 @@ export async function auditProject(target: string): Promise<AuditResult> {
     path.join(root, '.grok', 'skills', 'loop-constraints'),
     path.join(root, '.claude', 'skills', 'loop-constraints'),
     path.join(root, '.codex', 'skills', 'loop-constraints'),
+    path.join(root, '.cursor', 'skills', 'loop-constraints'),
+    path.join(root, '.trae', 'skills', 'loop-constraints'),
+    path.join(root, '.github', 'skills', 'loop-constraints'),
+    path.join(root, '.cline', 'skills', 'loop-constraints'),
   ];
   let constraintsSkill = false;
   for (const dir of constraintsSkillDirs) {
@@ -432,7 +446,7 @@ export async function auditProject(target: string): Promise<AuditResult> {
 
   if (!signals.verifier.present) {
     findings.push({ level: 'warn', message: 'No loop-verifier skill — maker/checker split incomplete.' });
-    recommendations.push('Add verifier: .grok/skills/loop-verifier, .claude/agents/loop-verifier.md, .codex/agents/verifier.toml, or a verifier agent in opencode.json');
+    recommendations.push('Add verifier: .grok/skills/loop-verifier, .claude/agents/loop-verifier.md, .cursor/agents/loop-verifier.md, .trae/skills/loop-verifier/SKILL.md, .github/skills/loop-verifier/SKILL.md, .codex/agents/verifier.toml, or a verifier agent in opencode.json');
   } else {
     findings.push({ level: 'ok', message: 'Verifier skill present.' });
   }

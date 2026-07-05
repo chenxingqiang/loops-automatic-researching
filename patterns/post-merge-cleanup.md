@@ -79,6 +79,26 @@ Last run: 2026-06-09 22:00 UTC
 **Codex**:
 - Automation: "Post-merge sweeper" on daily cadence, results to Triage inbox.
 
+
+**Cursor**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern post-merge-cleanup --tool cursor`
+- Automation daily: run `post-merge-scan` skill. Small fixes in worktree only.
+- See `examples/cursor/post-merge-cleanup.md`.
+
+
+**Trae**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern post-merge-cleanup --tool trae`
+- Agent chat: run skill from `.trae/skills/`. Optional rules in `.trae/rules/`.
+- See `examples/trae/`.
+
+
+**VS Code (multi-extension host)**:
+- Scaffold: `npx @cobusgreyling/loop-init . --pattern post-merge-cleanup --tool vscode`
+- Skills → `.github/skills/` (Copilot), `.claude/skills/` (Claude Code), `.trae/skills/` (Trae ext), `.cline/skills/` (Cline). Remove unused paths.
+- Standalone Trae/Cursor IDE → `--tool trae` or `--tool cursor`.
+- See `examples/vscode/plugins.md`.
+
+
 **GitHub Actions**:
 - See `examples/github-actions/post-merge-cleanup.yml` — triggers on push to main.
 

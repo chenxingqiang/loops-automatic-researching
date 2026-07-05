@@ -119,6 +119,7 @@ async function scanSkillsDirectory(targetDir) {
         path.join(targetDir, '.grok', 'skills'),
         path.join(targetDir, '.claude', 'skills'),
         path.join(targetDir, '.codex', 'skills'),
+        path.join(targetDir, '.cursor', 'skills'),
     ];
     for (const skillsDir of skillDirs) {
         if (!await fileExists(skillsDir))
