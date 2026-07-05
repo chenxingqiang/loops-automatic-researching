@@ -47,7 +47,7 @@ npx @iechor/loop-init --help
 ## 3. Check cost before you schedule (30 seconds)
 
 ```bash
-npx @cobusgreyling/loop-cost --pattern daily-triage --level L1 --cadence 1d
+npx @iechor/loop-cost --pattern daily-triage --level L1 --cadence 1d
 ```
 
 Adjust `--pattern`, `--level` (L1 → L2 → L3), and `--cadence` to match what you plan to run. High-frequency loops (CI Sweeper at 5m) can burn tokens fast — slow the cadence or require early-exit triage first.
@@ -184,7 +184,7 @@ npx @iechor/loop-init . --pattern daily-triage --tool grok
 npx @iechor/loop-init --help
 
 # Cost check
-npx @cobusgreyling/loop-cost --pattern daily-triage --level L1 --cadence 1d
+npx @iechor/loop-cost --pattern daily-triage --level L1 --cadence 1d
 
 # Audit + suggestions
 npx @iechor/loop-audit . --suggest

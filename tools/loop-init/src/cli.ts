@@ -291,7 +291,7 @@ function buildLoopBudgetMd(pattern: Pattern): string {
 ## Estimate spend
 
 \`\`\`bash
-npx @cobusgreyling/loop-cost --pattern ${pattern}
+npx @iechor/loop-cost --pattern ${pattern}
 \`\`\`
 `;
 }
@@ -812,7 +812,7 @@ npm run lint
   console.log(`First loop (${tool}):`);
   console.log(`  ${firstLoopCommand(pattern, tool)}`);
   console.log('');
-  console.log(`Estimate cost: npx @cobusgreyling/loop-cost --pattern ${pattern} --level L1`);
+  console.log(`Estimate cost: npx @iechor/loop-cost --pattern ${pattern} --level L1`);
   console.log('');
 }
 

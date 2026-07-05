@@ -1,7 +1,7 @@
 {
-  "name": "@cobusgreyling/loop-cost",
+  "name": "@iechor/loop-cost",
   "version": "1.0.3",
-  "description": "Estimate token budgets and daily costs for loop engineering patterns. By cadence, readiness level (L1/L2/L3), and coding agent tool.",
+  "description": "Estimate token budgets and daily costs for loop engineering patterns. npx @iechor/loop-cost --pattern daily-triage --level L1",
   "type": "module",
   "bin": {
     "loop-cost": "dist/cli.js"
@@ -32,16 +32,16 @@
     "budget",
     "devtools"
   ],
-  "author": "Cobus Greyling",
+  "author": "iechor",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cobusgreyling/loop-engineering.git",
+    "url": "git+https://github.com/chenxingqiang/loops-automatic-researching.git",
     "directory": "tools/loop-cost"
   },
-  "homepage": "https://cobusgreyling.github.io/loop-engineering/",
+  "homepage": "https://github.com/chenxingqiang/loops-automatic-researching",
   "bugs": {
-    "url": "https://github.com/cobusgreyling/loop-engineering/issues"
+    "url": "https://github.com/chenxingqiang/loops-automatic-researching/issues"
   },
   "publishConfig": {
     "access": "public"

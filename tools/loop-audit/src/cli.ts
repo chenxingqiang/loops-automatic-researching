@@ -85,7 +85,7 @@ try {
     console.log('');
     console.log('  # Or scaffold automatically:');
     console.log('  npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok');
-    console.log('  npx @cobusgreyling/loop-cost --pattern daily-triage --level L1');
+    console.log('  npx @iechor/loop-cost --pattern daily-triage --level L1');
     console.log('');
     console.log('  # IMPORTANT (v1.4): After scaffolding, actually RUN a loop (report-only) and commit the updated STATE.md.');
     console.log('  # This creates the "loopActivity" evidence that pushes you toward real L2/L3 scores.');

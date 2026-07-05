@@ -13,7 +13,10 @@
         "codex",
         "openclaw",
         "opencode",
-        "github-actions"
+        "github-actions",
+        "cursor",
+        "trae",
+        "vscode"
       ],
       "skills": [
         "pr-review-triage",
@@ -58,7 +61,10 @@
         "codex",
         "openclaw",
         "opencode",
-        "github-actions"
+        "github-actions",
+        "cursor",
+        "trae",
+        "vscode"
       ],
       "skills": [
         "loop-triage",
@@ -98,7 +104,10 @@
         "codex",
         "openclaw",
         "opencode",
-        "github-actions"
+        "github-actions",
+        "cursor",
+        "trae",
+        "vscode"
       ],
       "skills": [
         "ci-triage",
@@ -141,7 +150,10 @@
         "codex",
         "openclaw",
         "opencode",
-        "github-actions"
+        "github-actions",
+        "cursor",
+        "trae",
+        "vscode"
       ],
       "skills": [
         "post-merge-scan",
@@ -183,7 +195,10 @@
         "codex",
         "openclaw",
         "opencode",
-        "github-actions"
+        "github-actions",
+        "cursor",
+        "trae",
+        "vscode"
       ],
       "skills": [
         "dependency-triage",
@@ -228,7 +243,10 @@
         "codex",
         "openclaw",
         "opencode",
-        "github-actions"
+        "github-actions",
+        "cursor",
+        "trae",
+        "vscode"
       ],
       "skills": [
         "changelog-scan",
@@ -273,7 +291,10 @@
         "codex",
         "openclaw",
         "opencode",
-        "github-actions"
+        "github-actions",
+        "cursor",
+        "trae",
+        "vscode"
       ],
       "skills": [
         "issue-triage",

@@ -13,7 +13,7 @@
   <a href="https://github.com/chenxingqiang/loops-automatic-researching/actions/workflows/audit.yml"><img src="https://img.shields.io/github/actions/workflow/status/chenxingqiang/loops-automatic-researching/audit.yml?label=loop-audit%20dogfood" alt="loop-audit dogfood"></a>
   <a href="https://www.npmjs.com/package/@iechor/loop-audit"><img src="https://img.shields.io/npm/v/@iechor/loop-audit?label=loop-audit" alt="loop-audit npm"></a>
   <a href="https://www.npmjs.com/package/@iechor/loop-init"><img src="https://img.shields.io/npm/v/@iechor/loop-init?label=loop-init" alt="loop-init npm"></a>
-  <a href="https://www.npmjs.com/package/@cobusgreyling/loop-cost"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-cost?label=loop-cost" alt="loop-cost npm"></a>
+  <a href="https://www.npmjs.com/package/@iechor/loop-cost"><img src="https://img.shields.io/npm/v/@iechor/loop-cost?label=loop-cost" alt="loop-cost npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-sync"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-sync?label=loop-sync" alt="loop-sync npm"></a>
   <a href="https://www.npmjs.com/package/@cobusgreyling/loop-context"><img src="https://img.shields.io/npm/v/@cobusgreyling/loop-context?label=loop-context" alt="loop-context npm"></a>
   <a href="https://github.com/chenxingqiang/loops-automatic-researching/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
@@ -89,7 +89,7 @@ For developers using Grok, Claude Code, Codex, Cursor, Trae, VS Code (Copilot + 
 | [Opencode examples](examples/opencode/) | CLI-first loops: cron/systemd + `opencode run`, skills, worktrees |
 | [loop-audit](tools/loop-audit/) | Loop Readiness Score CLI (v1.5 + constraints scoring) — `npx @iechor/loop-audit . --suggest` · `--badge` for README |
 | [loop-init](tools/loop-init/) | Scaffold starters + budget/run-log + constraints (v1.4) — `npx @iechor/loop-init . --pattern daily-triage --tool grok` |
-| [loop-cost](tools/loop-cost/) | Token spend estimator — `npx @cobusgreyling/loop-cost` |
+| [loop-cost](tools/loop-cost/) | Token spend estimator — `npx @iechor/loop-cost` |
 | [loop-sync](tools/loop-sync/) | Drift detection between `STATE.md` and `LOOP.md` — `npx @cobusgreyling/loop-sync .` |
 | [loop-context](tools/loop-context/) | Stateful memory manager + circuit breaker for long runs — `npx @cobusgreyling/loop-context --check --ledger run.json` |
 | [loop-mcp-server](tools/mcp-server/) | MCP runtime lookup for patterns, skills, state — `node tools/mcp-server/dist/index.js` (repo v1; npm pending) |
@@ -188,7 +188,7 @@ npx @iechor/loop-init . --pattern daily-triage --tool grok
 #    Cursor / Trae / VS Code: --tool cursor | trae | vscode
 
 # 2. Estimate token spend for your cadence
-npx @cobusgreyling/loop-cost --pattern daily-triage --level L1
+npx @iechor/loop-cost --pattern daily-triage --level L1
 
 # 3. Re-audit after improvements
 npx @iechor/loop-audit . --suggest

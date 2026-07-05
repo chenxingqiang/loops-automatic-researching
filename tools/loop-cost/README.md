@@ -1,15 +1,17 @@
 # loop-cost
 
-Estimate daily token spend for [loop engineering](https://github.com/cobusgreyling/loop-engineering) patterns by cadence and readiness level (L1–L3).
+Estimate daily token spend for [loop engineering](https://github.com/chenxingqiang/loops-automatic-researching) patterns by cadence and readiness level (L1–L3).
 
 Uses cost metadata from `patterns/registry.yaml`.
+
+Published as [`@iechor/loop-cost`](https://www.npmjs.com/package/@iechor/loop-cost).
 
 ## Install & Run
 
 ```bash
-npx @cobusgreyling/loop-cost --pattern ci-sweeper --cadence 15m --level L2
-npx @cobusgreyling/loop-cost --pattern daily-triage --level L1 --json
-npx @cobusgreyling/loop-cost --list
+npx @iechor/loop-cost --pattern ci-sweeper --cadence 15m --level L2
+npx @iechor/loop-cost --pattern daily-triage --level L1 --json
+npx @iechor/loop-cost --list
 ```
 
 **From this repo:**
