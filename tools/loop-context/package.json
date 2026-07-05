@@ -1,7 +1,7 @@
 {
-  "name": "@cobusgreyling/loop-context",
+  "name": "@iechor/loop-context",
   "version": "1.0.0",
-  "description": "Stateful memory manager for agent loops — summarize, prune, and inject context, with a circuit breaker that escalates stagnant or no-progress runs instead of burning tokens.",
+  "description": "Stateful memory manager and circuit breaker for agent loops. npx @iechor/loop-context --check --ledger loop-ledger.json",
   "type": "module",
   "main": "dist/context-manager.js",
   "exports": {
@@ -34,16 +34,16 @@
     "grok",
     "devtools"
   ],
-  "author": "Cobus Greyling",
+  "author": "iechor",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cobusgreyling/loop-engineering.git",
+    "url": "git+https://github.com/chenxingqiang/loops-automatic-researching.git",
     "directory": "tools/loop-context"
   },
-  "homepage": "https://cobusgreyling.github.io/loop-engineering/",
+  "homepage": "https://github.com/chenxingqiang/loops-automatic-researching",
   "bugs": {
-    "url": "https://github.com/cobusgreyling/loop-engineering/issues"
+    "url": "https://github.com/chenxingqiang/loops-automatic-researching/issues"
   },
   "publishConfig": {
     "access": "public"
